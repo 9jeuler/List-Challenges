@@ -11,13 +11,20 @@ function largest(list){
 
 //Task 2
 function reverse(list){
-
+  let reversie = [];
+  for (let d = list.length-1; d >= 0; d = d-1) {
+    reversie.push(list[d])
+  }
+    return reversie;
 }
 //Task 3
-function cotains(list,e){
-  for (let i = 0; i < list.length; i++) {
-    if(e == list[i]){
+function contains(list,e){
+  for (let e = 0; e < list.length; e++) {
+    if(e == list[e]){
       return true;
+    }
+    else{
+      return false;
     }
   }
 
@@ -26,12 +33,21 @@ function cotains(list,e){
 
 //Task 4
 function oddElements(list){
+  let oddidy = []
+    for (let i = 1; i < list.length; i=i+2) {
+      oddidy.push(list[i])
+    }
+      return oddidy;
 
 }
 
 //Task 5
 function total(list){
-
+  let joe=0 ;
+  for (let p = 0; p < list.length; p++){
+  joe = joe+list[p]
+}
+return joe;
 }
 
 //Task 6
@@ -75,6 +91,9 @@ function main(){
   let e = 18
 
   console.log(largest(list));
+  console.log(reverse(list));
   console.log(contains(list,e));
+  console.log(oddElements(list));
+  console.log(total(list));
 }
 main();
