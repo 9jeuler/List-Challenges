@@ -66,13 +66,32 @@ function isPalindrome(list){
 //Task 7
 //Do second to last
 function recursiveTotal(list){
-
+      if (list.length === 1){
+        return list[0];
+      }
+      else{
+        return list.pop() + recursiveTotal(list)
+      }
 }
+//bonus task(jkactually the real task)
+function realRecursiveTotal(list){
+let mac = []
+  if (list.length == 1){
+    return list[0];
+  }
+  else{
+    
+  }
+}
+
 //Task 8
 function concatenate(listA, listB){
   let dylan = [];
-  for (let j = 0, p = 0; j < listA.length, p < listB.length; j++, p++) {
+  for (let j = 0; j < listA.length; j++){
     dylan.push(listA[j]);
+
+  }
+  for (let p = 0; p < listB.length; p++){
     dylan.push(listB[p]);
   }
   return dylan
@@ -102,7 +121,7 @@ function fibonacci(){
 function main(){
   let list = [1, 2, 3, 4, 5, 6, 7, 8];
   let e = 18
-  let listA = [1, 3, 5, 7, 9, 11, 13]
+  let listA = ["J", "O", "H", "N", "A", "N", "D"]
   let listB = ["P", "L", "A", "C", "E", "D", "O"]
 
   console.log(largest(list));
@@ -111,6 +130,8 @@ function main(){
   console.log(oddElements(list));
   console.log(total(list));
   console.log(isPalindrome(list));
+  console.log(recursiveTotal(list));
   console.log(concatenate(listA,listB));
+
 }
 main();
